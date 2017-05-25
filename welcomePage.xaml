@@ -1,0 +1,45 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Encyclopedia.welcomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+   >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <SolidColorBrush Color="{StaticResource BackgroundColor}"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Encyclopedia" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Welcome" Margin="94,-7,85,0" Style="{StaticResource PhoneTextTitle1Style}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Name="TextBlockUserName" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button x:Name="btnArticles" Content="Articles" HorizontalAlignment="Left" Margin="25,27,0,0" VerticalAlignment="Top" Click="button_Click" Width="406" Height="152" RenderTransformOrigin="0.481,0.385" Background="#FFF15555" FontSize="36"/>
+            <Grid HorizontalAlignment="Left" Height="458" Margin="10,50,0,0" VerticalAlignment="Top" Width="446"/>
+            <Button x:Name="btnTest" Content="Tests" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,184,0,0" Width="406" Height="147" Click="btnTest_Click" FontSize="36" Background="#FFF15555" BorderThickness="3"/>
+            <Button x:Name="btnStatistic" Content="Statistics" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,336,0,0" Width="406" Height="146" Click="btnStatistic_Click" FontSize="36" Background="#FFF15555"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
